@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-border {
+  border: 6px solid #dbe5f3;
+}
+.custom-bg {
+  background-color: #ecf1f5;
+}
+.custom-button {
+  border: 0;
+  background-color: #28a745;
+  color: white;
+  padding: 0.5rem 1rem;
+  opacity: 0.75;
+}
