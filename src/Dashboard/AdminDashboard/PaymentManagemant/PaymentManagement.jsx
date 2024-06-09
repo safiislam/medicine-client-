@@ -1,6 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import useAxiosPublic from "../../../hooks/useAxiosPublic";
 
 
 const PaymentManagement = () => {
