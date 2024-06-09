@@ -92,7 +92,7 @@ const Dashboard = () => {
 
 
                         {
-                            meData?.role === "seller" &&
+                            // meData?.role === "seller" &&
                             <>
                                 <h2 className="md:text-xl text-xs font-bold text-center">Seller</h2>
                                 <div className="divider"></div>

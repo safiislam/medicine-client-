@@ -2,8 +2,7 @@ import { Link } from "react-router-dom";
 import useMainCategoryData from "../../../../hooks/useMainCategoryData";
 
 const MainCategoryData = () => {
-  const token = localStorage.getItem('accessToken')
-  const [mcategory] = useMainCategoryData(token);
+  const [mcategory] = useMainCategoryData();
   console.log("maincategory", mcategory);
   return (
     <div className="grid grid-cols-3">
