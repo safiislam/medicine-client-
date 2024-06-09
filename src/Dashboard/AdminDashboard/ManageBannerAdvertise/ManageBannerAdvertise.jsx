@@ -10,13 +10,17 @@ const ManageBannerAdvertise = () => {
     queryKey: ['getAd'],
     queryFn: async () => {
       if (user) {
-        const res = await axios.get(`${import.meta.env.VITE_SERVER_URL}/getAd?email=${user?.email}`);
+        const res = await axios.get(`${import.meta.env.VITE_SERVER_URL}/getAd?email=${user?.email}`, {
+          headers: { Authorization: localStorage.getItem('accessToken') }
+        });
         return res.data;
       }
     }
   })
   const handleUpdate = async (id) => {
-    const res = await axios.patch(`${import.meta.env.VITE_SERVER_URL}/updateAd/${id}`)
+    const res = await axios.patch(`${import.meta.env.VITE_SERVER_URL}/updateAd/${id}`, {}, {
+      headers: { Authorization: localStorage.getItem('accessToken') }
+    })
     if (res) {
       refetch()
     }
